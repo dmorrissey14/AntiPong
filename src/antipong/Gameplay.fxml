@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#setUserMove" onKeyReleased="#clearUserMove" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="antipong.GameplayController">
+   <children>
+      <Label layoutX="692.0" layoutY="6.0" text="Score:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreLabel" layoutX="755.0" layoutY="6.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="4.0" text="Anti Pong">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Line endX="700.0" layoutX="100.0" layoutY="35.0" startX="-100.0" />
+      <Canvas fx:id="gameArena" height="565.0" layoutY="36.0" width="800.0" />
+   </children>
+</AnchorPane>
