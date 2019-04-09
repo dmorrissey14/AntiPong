@@ -28,3 +28,7 @@ build/built-jar.properties
 build/classes/antipong/GameplayController.class
 *.html
 dist/AntiPong.jnlp
+build/built-jar.properties
+dist/AntiPong.html
+dist/AntiPong.jar
+dist/AntiPong.jnlp
