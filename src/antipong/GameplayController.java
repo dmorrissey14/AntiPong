@@ -67,17 +67,49 @@ public class GameplayController implements Initializable {
     public void setUserMove(KeyEvent ke){
         if (ke.getCode().equals(KeyCode.DOWN)){
             game.setUserMove(Move.DOWN);
+            down = true;
         }
         if (ke.getCode().equals(KeyCode.UP)){
             game.setUserMove(Move.UP);
+            up = true;
         }
     }
     
+    /**
+     * We must consider whether both keys are being held down
+     * when we clear the user move. If the other key is still held, 
+     * we switch to that direction instead of clearing out the user
+     * move
+     * @param ke 
+     */
     @FXML
     public void clearUserMove(KeyEvent ke){
-        game.setUserMove(Move.NONE);
+        if (ke.getCode().equals(KeyCode.DOWN)){
+            if (up == false){
+                game.setUserMove(Move.NONE);
+            }else{
+                game.setUserMove(Move.UP);
+            }
+            
+            down = false;
+        }
+        else if (ke.getCode().equals(KeyCode.UP)){
+            if (down == false){
+                game.setUserMove(Move.NONE);
+            }else{
+                game.setUserMove(Move.DOWN);
+            }
+            
+            up = false;
+        }
     }
         
+   
+    /**
+     * This updates the state of the game on intervals using the animation timer.
+     * Each iteration the amount of time passed is passed to our Game instance
+     * to allow it to update. Once the game ends, we transition to the final scene.
+     */
     public void runGame(){
         timer = new AnimationTimer(){
             public void handle(long currentNanoTime){

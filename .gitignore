@@ -21,3 +21,10 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+build/built-jar.properties
+build/built-jar.properties
+build/classes/antipong/GameplayController$1.class
+build/built-jar.properties
+build/classes/antipong/GameplayController.class
+*.html
+dist/AntiPong.jnlp
