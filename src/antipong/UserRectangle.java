@@ -21,6 +21,7 @@ public class UserRectangle extends Sprite {
      * provided graphics context.
      * @param gc 
      */
+    @Override
     public void render(GraphicsContext gc){
         gc.setFill(Color.RED);
         gc.fillRect(x, y, width, height);
@@ -32,6 +33,7 @@ public class UserRectangle extends Sprite {
      * velocity and time to adjust how far they should move.
      * @param time 
      */
+    @Override
     public void update(double time){
         y += velocity * time;
     }

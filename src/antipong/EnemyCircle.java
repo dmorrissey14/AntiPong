@@ -35,6 +35,7 @@ public class EnemyCircle extends Sprite{
      * Enemy circles are, of course, drawing a circle on the canvas.
      * @param gc 
      */
+    @Override
     public void render(GraphicsContext gc){
         gc.setFill(Color.BLUE);
         gc.fillOval(x, y, width, height);
@@ -45,6 +46,7 @@ public class EnemyCircle extends Sprite{
      * move them based upon the velocity and time passed.
      * @param time 
      */
+    @Override
     public void update(double time){
         x += velocity * time;
     }
