@@ -21,7 +21,7 @@ Select "Run" in Netbeans or run `java AntiPong` from the appropriate directory.
 ## Authors
 Duncan Morrissey
 
-Created as a project for Adv Java Programming at BU MET 622.
+Created as a project for BU MET 622.
 
 ## License
 This project is licensed under the MIT License.
